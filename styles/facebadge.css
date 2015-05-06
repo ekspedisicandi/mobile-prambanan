@@ -1,0 +1,279 @@
+* { 
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30px 0;
+}
+
+a img {
+  outline : none;
+	border: none;
+}
+
+.fb {
+  border: 1px solid #8c8c8c;
+  border: 1px solid rgba(0, 0, 0, .45);
+  border-bottom: 1px solid #666;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.fb > * {
+  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+
+.fb .minicover {
+  background-color: #3B5998;
+  height: 155px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.fb .minicover img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 370px;
+}
+
+.gradient-shadow {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,.75) 100%);
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.75) 100%);
+  bottom: 0;
+  height: 80px;
+  position: absolute;
+  width: 370px;
+}
+
+.fb .info {
+  left: 129px;
+  line-height: 1.2;
+  max-width: 250px;
+  min-height: 37px;
+  position: absolute;
+  top: 115px;
+}
+
+.fb .info span {
+  display: block;
+}
+
+.fb .info span a {
+  color: #fff;
+  padding-bottom: 1px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #000;
+}
+
+.fb .info span a:hover {
+  text-decoration: underline;
+}
+
+.fb .fn {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fb .location {
+  font-size: 11px;
+}
+
+.fb .dp {
+  display: inline-block;
+  margin: -62px 10px 5px;
+  position: relative;
+}
+
+.fb .dp img {
+  border: 3px solid #fff;
+  border-radius: 2%;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, .5);
+  display: block;
+  width: 100px;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.fb .dp:hover, .fb .dp img:hover {
+  border-radius: 50%;
+}
+
+.gplus {
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto 0;
+  position: relative;
+  width: 240px;
+}
+
+.gplus > * {
+  font: normal 13px Roboto,arial,sans-serif;
+}
+
+.gplus .minicover {
+  border-radius: 3px 3px 0 0;
+  width: 240px;
+}
+
+.gplus .dp {
+  margin-bottom: -40px;
+  position: relative;
+  text-align: center;
+  top: -40px;
+}
+
+.gplus .dp img {
+  border: 5px solid #fff;
+  border-radius: 50%;
+  height: 80px;
+  transition: all .65s ease-in-out;
+  width: 80px;
+}
+
+.gplus .dp img:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.gplus .overlay {
+  background-color: black;
+  filter: alpha(opacity=18);
+  height: 135px;
+  left: 0;
+  opacity: .18;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gplus .info {
+  padding: 4px 8px 10px;
+  text-align: center;
+}
+
+.gplus .info .fn {
+  color: #262626;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.gplus .info .fn a {
+  color: #262626;
+  text-decoration: none;
+  transition-duration:.218s;
+}
+
+.gplus .info .fn a:hover {
+  text-decoration: underline;
+}
+
+.gplus:hover .info .fn a {
+  color: #427FED;
+  cursor: pointer;
+}
+
+.gplus .info p {
+  color: #737373;
+  font-size: 12px;
+  line-height: 25px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.twitter {
+  background-image: url(https://pbs.twimg.com/profile_banners/258131416/1372029870/web);
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  height: 260px;
+  margin: 20px auto 0;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0,0,0,.7);
+  width: 520px;
+}
+
+.twitter .overlay {
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0.55) 100%);
+  border-radius: 5px;
+  height: 260px;
+  position: absolute;
+  width: 520px;
+}
+
+.twitter .inner {
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  width: 85%;
+}
+
+.twitter .dp-a {
+  display: inline-block;
+  margin: 10px auto;
+}
+
+.twitter .dp {
+  background-color: #fff;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+  height: 73px;
+  width: 73px
+}
+
+.twitter h1, .twitter h2, .twitter p {
+  margin: 6px 0;
+}
+
+.twitter a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.twitter a:hover {
+  text-decoration: underline;
+}
+
+.twitter .fn {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.twitter s {
+  text-decoration: none;
+}
+
+.twitter .username {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.twitter .bio {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.twitter .location, .twitter .url {
+  font-size: 14px;
+}
+
+.twitter .divider {
+  padding: 0 2px;
+}

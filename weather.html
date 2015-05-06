@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--Declare page as mobile friendly --> 
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+<!-- Declare page as iDevice WebApp friendly -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png"> 
+<!-- iPhone 3, 3Gs -->
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" 			media="screen and (max-device-width: 320px)" /> 
+<!-- iPhone 4 -->
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen%402x.png" 		media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+<!-- iPhone 5 -->
+<link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen%403x.png" />
+
+<!-- Page Title -->
+<title>Prambanan Temple</title>
+
+<!-- Stylesheet Load -->
+<link href="styles/style.css"				rel="stylesheet" type="text/css">
+<link href="styles/framework-style.css" 	rel="stylesheet" type="text/css">
+<link href="styles/framework.css" 			rel="stylesheet" type="text/css">
+<link href="styles/coach.css"				rel="stylesheet" type="text/css">
+<link href="styles/bxslider.css"			rel="stylesheet" type="text/css">
+<link href="styles/swipebox.css"			rel="stylesheet" type="text/css">
+<link href="styles/icons.css"				rel="stylesheet" type="text/css">
+<link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+
+<style>
+
+@font-face {
+    font-family: 'weather';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot');
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.woff') format('woff'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.ttf') format('truetype'),
+         url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#weather {
+  width: 500px;
+  margin: 0px auto;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+i {
+  color: #7F8C8D;
+  font-family: weather;
+  font-size: 130px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+#weather h2 {
+  color: #7F8C8D;
+  font-size: 50px;
+  font-weight: 300;
+  text-align: left;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  padding: 0px;
+  display: inline-block;
+}
+
+#weather .currently {
+  margin: 0 0px;
+}
+</style>
+
+<!--Page Scripts Load -->
+<script src="scripts/jquery.min.js"		 type="text/javascript"></script>	
+<script src="scripts/snap.js"			 type="text/javascript"></script>
+<script src="scripts/hammer.js"			 type="text/javascript"></script>	
+<script src="scripts/jquery-ui-min.js"   type="text/javascript"></script>
+<script src="scripts/subscribe.js"		 type="text/javascript"></script>
+<script src="scripts/contact.js"		 type="text/javascript"></script>
+<script src="scripts/jquery.swipebox.js" type="text/javascript"></script>
+<script src="scripts/bxslider.js"		 type="text/javascript"></script>
+<script src="scripts/colorbox.js"		 type="text/javascript"></script>
+<script src="scripts/retina.js"			 type="text/javascript"></script>
+<script src="scripts/custom.js"			 type="text/javascript"></script>
+<script src="scripts/framework.js"		 type="text/javascript"></script>
+
+</head>
+<body>
+
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			Loading the content...
+            <em>Wait a momment!</em>
+        </p>
+    </div>
+</div>
+
+<div class="page-coach">
+	<div class="portrait-coach">
+        <span  style="top:40px; left:28px;" class="coach-arrow arrow1">
+        	<h3 style="padding-top:35px; padding-left:100px; margin-bottom:-5px;">TAP THE ICON!</h3>
+            <p style="padding-top:0px; padding-left:100px;">TO OPEN NAVIGATION!</p>
+        </span>
+        
+        <span  style="top:170px; left:90px; width:320px;" class="coach-arrow arrow2">
+        	<h3 style="padding-top:45px; padding-right:55px;  margin-bottom:-5px;">SWIPE THE SLIDER</h3>
+            <p style="padding-top:00px; padding-right:55px;">SWIPE LEFT OR RIGHT!</p>
+        </span>
+        
+        <span  style="top:310px; left:20px;" class="coach-arrow arrow9">
+        	<h3 style="padding-top:15px; padding-left:110px;  margin-bottom:-5px;">SWIPE THE PAGE!</h3>
+            <p style="padding-top:0px; padding-left:110px;">TO SEE THE NAVIGATION!</p>
+        </span>
+       
+        <span  style="top:400px; left:120px;" class="coach-arrow arrow16">
+        	<h3 style="margin-left:-50px; padding-top:15px;  margin-bottom:-5px;">TAP ANYWHERE TO CLOSE!</h3>
+            <p style="margin-left:-162px; padding-left:110px;">CLOSE THE COACH, TAP THE PAGE!</p>
+        </span>
+       
+    </div>    
+    <div class="landscape-coach">        
+        <span style="left:47%; top:15%;" class="coach-arrow arrow12">
+            <p style="text-align:center; padding-top:100px; margin-left:-160px;">
+            	This page has a lot of responsive features!<br>
+                That means they expand when the device is in landscape!<br>
+				Flip your device back in portrait mode to continue the tutorial!<br>      
+            </p>
+        </span>
+    </div>
+</div>
+
+<div class="all-elements">
+    
+    <div id="sidebar" class="page-sidebar">
+        <div class="page-sidebar-scroll">
+
+			<a href="index.html" class="nav-icon home-icon">HOME</a>
+            <a href="maps.html" class="nav-icon maps-icon">MAPS</a>
+            <a href="history.html" class="nav-icon article-icon">HISTORY</a>
+            <a href="live.html" class="nav-icon weather-icon-selected">LIVE</a>
+            <a href="media.html" class="nav-icon gallery-icon">MEDIA</a>
+            <a href="ticket.html" class="nav-icon ticket-icon">TICKET</a>
+            <a href="about.html" class="nav-icon about-icon">ABOUT</a>
+        	<a href="#" class="nav-icon nav-coach coach-icon">HELP</a>
+            <a href="mailto:farid@designer.web.id" class="nav-icon contact-icon">MAIL</a>
+            <a href="tel:+6281392541831" class="nav-icon call-icon">CALL</a>
+            <a href="sms:+6281392541831" class="nav-icon text-icon">SMS</a>
+        </div>
+    </div>
+       
+    <div id="content" class="page-content">
+        
+        <div class="decoration"></div>    
+
+        <div class="container">
+            <div class="blog-post">
+                <div class="post-image">
+                    <img class="blog-post-image" src="images/temple/google-maps-new-interface.jpg" alt="img">  
+                </div>
+                <div class="post-content">
+                    <h3>&mdash; WEATHER FORECAST</h3>         
+                    <p>
+                        Conect Internet to update forecast<br/><a href="weather.html">View Weather</a>
+      
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="decoration"></div>   
+         
+        <div class="container">
+            
+            <div id="weather"></div>
+
+  <script src='scripts/jquery.simpleWeather.min.js'></script>
+            <script src="scripts/full.weather.js"></script>
+        </div>
+
+        <div class="decoration"></div>
+    
+        <div class="container no-bottom">
+            <div class="recent-post">
+                <p>
+                    <img src="images/temple/weather.png" width="90" alt="img">
+                    <strong>WEATHER</strong><br/>
+                    Live Weather Forecast<br/> 
+                    <a href="#">Forecast</a>
+                </p>
+            </div>
+            <div class="recent-post">
+                <p>
+                    <img src="images/temple/events.png" width="90" alt="img">
+                    <strong>EVENTS</strong><br/>
+                    View Your Location <br/> 
+                    <a href="#">View Events</a>
+                </p>
+            </div>
+        </div>         
+                            
+    	<div class="decoration"></div>  
+    
+        <div class="container">
+            <p class="center-text"><a href="about.html" class="footer-link">About</a> | <a href="heriatage.html" class="footer-link">Cultural Heritage</a> | <a href="terms.html" class="footer-link">Terms</a></p>
+        </div>
+               
+	</div>   
+</div>
+
+    <script src="scripts/simple.weather.js"></script>
+
+</body>
+
+</html>
