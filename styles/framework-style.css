@@ -871,9 +871,9 @@ blockquote					{	color:#7f8c8d!important;}
 	display:block;
 	max-width:100%;
 	overflow:visible!important;
-	background-color:#212121;
+	background-color:none;
 	padding:4px;
-	border:solid 1px #cacaca;
+	border:solid 1px #444444;
 }
 
 .blog-post p{
@@ -965,9 +965,9 @@ blockquote					{	color:#7f8c8d!important;}
 .recent-post img{
 	width:100px;
 	height:100px;
-	background-color:#000000;
+	background-color: none;
 	padding:3px;
-	border:solid 1px #cacaca;
+	border:solid 1px #444444;
 	float:left;
 	margin-right:10px;
 }
